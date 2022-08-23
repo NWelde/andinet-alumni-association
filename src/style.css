@@ -1,5 +1,21 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
 
+html {
+  background-color: darkslategray;
+}
+#col1 {
+  height: 25vh;
+}
+#col2 {
+  height: 25vh;
+}
+#main-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navbar */
 @media screen and (min-width: 1024px) {
   .navbar {
     background: #a9d0aa;
@@ -17,7 +33,55 @@
     visibility: hidden;
   }
 }
-
 .navbar {
   background: #a9d0aa;
+  transition: background 500ms;
 }
+.navbar-burger {
+  background-color: rgb(145, 194, 145);
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar-burger:hover {
+  background-color: rgb(161, 195, 93);
+}
+/* . */
+
+/* Typewriter animation for all but mobile devices */
+.typed {
+  font-family: "Fira Code", monospace;
+  position: relative;
+  color: white;
+  font-size: 1.5em;
+}
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blinker {
+  to {
+    background: transparent;
+  }
+}
+@media screen and (min-width: 300px) {
+  .typed::before,
+  .typed::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .typed::before {
+    background-color: darkslategray;
+    animation: typing 4s steps(26) 750ms forwards;
+  }
+  .typed::after {
+    background-color: white;
+    width: 0.17em;
+    animation: typing 4s steps(26) 750ms forwards,
+      blinker 0.75s steps(26) infinite;
+  }
+}
+/* . */
