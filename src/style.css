@@ -1,5 +1,23 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+@media screen and (min-width: 1024px) {
+  .navbar {
+    background: #a9d0aa;
+    height: 4rem;
+  }
+  #logo-container {
+    background: url("https://www.andinet.edu.et/wp-content/uploads/2017/01/cropped-Aislogo-1-e1586036670421.png")
+      no-repeat center center;
+    background-size: cover;
+    width: 12rem;
+    height: 3rem;
+    margin: auto;
+  }
+  #logo {
+    visibility: hidden;
+  }
+}
+
 .navbar {
-  background: #529153;
+  background: #a9d0aa;
 }
