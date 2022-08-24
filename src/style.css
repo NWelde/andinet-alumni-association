@@ -1,33 +1,30 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
 
 html {
   background-color: darkslategray;
 }
+/* .title {
+  color: white;
+  position: absolute;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  z-index: 2;
+}
 #col1 {
-  height: 25vh;
-}
-#col2 {
-  height: 25vh;
-}
-#main-img {
-  width: 100%;
-  height: auto;
-}
+  height: 100vh;
+  text-align: center;
+} */
 
 /* Navbar */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .navbar {
     background: #a9d0aa;
     height: 4rem;
   }
   #logo-container {
-    background: url("https://www.andinet.edu.et/wp-content/uploads/2017/01/cropped-Aislogo-1-e1586036670421.png")
+    background: url("ais-logo.png")
       no-repeat center center;
     background-size: cover;
-    width: 12rem;
-    height: 3rem;
-    margin: auto;
   }
   #logo {
     visibility: hidden;
@@ -43,14 +40,13 @@ html {
 }
 .navbar-burger:hover {
   background-color: rgb(161, 195, 93);
-}
+} */
 /* . */
 
 /* Typewriter animation for all but mobile devices */
-.typed {
+/* .typed {
   font-family: "Fira Code", monospace;
   position: relative;
-  color: white;
   font-size: 1.5em;
 }
 @keyframes typing {
@@ -83,5 +79,5 @@ html {
     animation: typing 4s steps(26) 750ms forwards,
       blinker 0.75s steps(26) infinite;
   }
-}
+} */
 /* . */
