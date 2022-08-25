@@ -1,83 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
-html {
-  background-color: darkslategray;
+* {
+  margin: 0;
 }
-/* .title {
-  color: white;
-  position: absolute;
-  font-family: "Alumni Sans Pinstripe", sans-serif;
-  z-index: 2;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-#col1 {
-  height: 100vh;
-  text-align: center;
-} */
-
-/* Navbar */
-/* @media screen and (min-width: 1024px) {
-  .navbar {
-    background: #a9d0aa;
-    height: 4rem;
-  }
-  #logo-container {
-    background: url("ais-logo.png")
-      no-repeat center center;
-    background-size: cover;
-  }
-  #logo {
-    visibility: hidden;
-  }
+canvas {
+  display: block;
 }
-.navbar {
-  background: #a9d0aa;
-  transition: background 500ms;
-}
-.navbar-burger {
-  background-color: rgb(145, 194, 145);
-  transition: background-color 0.5s ease-in-out;
-}
-.navbar-burger:hover {
-  background-color: rgb(161, 195, 93);
-} */
-/* . */
-
-/* Typewriter animation for all but mobile devices */
-/* .typed {
-  font-family: "Fira Code", monospace;
+.container {
   position: relative;
-  font-size: 1.5em;
 }
-@keyframes typing {
-  to {
-    left: 100%;
-  }
+#particles-js {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.andinet.edu.et/wp-content/uploads/2021/11/secondary-division-compound.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
-@keyframes blinker {
-  to {
-    background: transparent;
-  }
+.main {
+  position: relative;
+  color: white;
+  font-family: Comfortaa, cursive;
+  font-size: 3.5rem;
+  font-weight: lighter;
 }
-@media screen and (min-width: 300px) {
-  .typed::before,
-  .typed::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-  .typed::before {
-    background-color: darkslategray;
-    animation: typing 4s steps(26) 750ms forwards;
-  }
-  .typed::after {
-    background-color: white;
-    width: 0.17em;
-    animation: typing 4s steps(26) 750ms forwards,
-      blinker 0.75s steps(26) infinite;
-  }
-} */
-/* . */
