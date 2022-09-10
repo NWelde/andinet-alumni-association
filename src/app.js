@@ -53,3 +53,32 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+
+// I know I know... but it's for the cards
+let minicard1 = document.querySelector(".mini-card1");
+let minicard2 = document.querySelector(".mini-card2");
+let minicard3 = document.querySelector(".mini-card3");
+let info2 = document.querySelector(".info2");
+let info3 = document.querySelector(".info3");
+let info4 = document.querySelector(".info4");
+
+minicard1.addEventListener("mouseover", () => {
+  info2.style.transform = "translateY(0%)";
+});
+minicard1.addEventListener("mouseout", () => {
+  info2.style.transform = "translateY(-100%)";
+});
+
+minicard2.addEventListener("mouseover", () => {
+  info3.style.transform = "translateY(0%)";
+});
+minicard2.addEventListener("mouseout", () => {
+  info3.style.transform = "translateY(-100%)";
+});
+
+minicard3.addEventListener("mouseover", () => {
+  info4.style.transform = "translateY(0%)";
+});
+minicard3.addEventListener("mouseout", () => {
+  info4.style.transform = "translateY(-100%)";
+});

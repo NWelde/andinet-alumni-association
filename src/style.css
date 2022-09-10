@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
 * {
   margin: 0;
+  font-family: "Darker Grotesque", sans-serif;
+  box-sizing: content-box;
 }
 html,
 body {
@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
   width: 20px;
 }
 body::-webkit-scrollbar-track {
-  background: transparent;
+  background: white;
   width: 10px;
 }
 
@@ -34,13 +34,14 @@ canvas {
 }
 .pjs-container {
   position: relative;
+  color: white;
 }
 #particles-js {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://www.andinet.edu.et/wp-content/uploads/2021/11/secondary-division-compound.jpg");
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.7)),
+    url("/imgs/secondary-division-compound.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -54,25 +55,23 @@ canvas {
 }
 .navitem {
   display: inline;
-  color: white;
-  font-weight: bold;
-  font-family: Comfortaa, cursive;
+  font-weight: 500;
+  font-size: 1.3em;
   padding: 20px 0 0 0;
+  transition: color 0.5s ease;
 }
 .navitem:hover {
   cursor: pointer;
+  color: rgb(218, 207, 148);
 }
 
 /* Title text */
 .main {
   position: relative;
-  color: white;
-  font-family: Comfortaa, cursive;
-  font-size: 3.5rem;
-  font-weight: lighter;
+  font-size: 4.5em;
+  font-weight: 400;
   text-align: center;
-  top: 50%;
-  padding: 22% 0 0 0;
+  padding: 20% 0 0 0;
 }
 
 /* Not an elegant solution but empty div that takes up space */
@@ -83,7 +82,73 @@ canvas {
 }
 
 /* About Us section */
-.card {
+.main-about {
   display: flex;
   justify-content: center;
+}
+.main-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  margin: 10%;
+  margin-bottom: 5%;
+  border: 1px solid rgb(232, 230, 219);
+  border-left: none;
+}
+.image1 {
+  width: 45%;
+  border-left: 1px solid rgb(232, 230, 219);
+}
+.info1 {
+  max-width: 55ch;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* Our team section */
+.our-team {
+  padding-top: 6%;
+}
+.styling {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  background-color: rgb(232, 230, 219);
+}
+.mini-card1,
+.mini-card2,
+.mini-card3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: none;
+  width: 25vw;
+  margin: 3%;
+  transition: width 0.5s ease;
+}
+.mini-card1:hover {
+  width: 27vw;
+}
+.mini-card2:hover {
+  width: 27vw;
+}
+.mini-card3:hover {
+  width: 27vw;
+}
+.mini-image {
+  flex-basis: 100%;
+  z-index: 1;
+}
+.info2,
+.info3,
+.info4 {
+  max-width: 35ch;
+  font-size: 1.3em;
+  transform: translateY(-100%);
+  z-index: 0;
+  transition: transform 1s ease;
+  border: 1px solid white;
+  border-top: none;
+  padding: 0 10px 10px 10px;
 }
