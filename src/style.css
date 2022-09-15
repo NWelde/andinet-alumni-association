@@ -80,7 +80,7 @@ canvas {
   font-size: 4.5em;
   font-weight: 400;
   text-align: center;
-  padding: 20% 0 0 0;
+  margin: 20% 0 0 0;
 }
 
 /* Not an elegant solution but empty div that takes up space */
