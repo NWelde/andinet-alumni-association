@@ -1,31 +1,37 @@
-// I know I know... but it's for the cards
-let minicard1 = document.querySelector(".mini-card1");
-let minicard2 = document.querySelector(".mini-card2");
-let minicard3 = document.querySelector(".mini-card3");
-let info2 = document.querySelector(".info2");
-let info3 = document.querySelector(".info3");
-let info4 = document.querySelector(".info4");
+let minicards = document.querySelectorAll(".minicard");
+let infos = document.querySelectorAll(".mini-info");
 
-minicard1.addEventListener("mouseover", () => {
-  info2.style.transform = "translateY(0%)";
-});
-minicard1.addEventListener("mouseout", () => {
-  info2.style.transform = "translateY(-100%)";
-});
+let flexes = document.querySelectorAll(".flexy")
+const tablet = window.matchMedia(
+  "only screen and (min-width: 701px) and (max-width: 900px)"
+);
+const desktop = window.matchMedia("only screen and (min-width: 1101px)");
 
-minicard2.addEventListener("mouseover", () => {
-  info3.style.transform = "translateY(0%)";
-});
-minicard2.addEventListener("mouseout", () => {
-  info3.style.transform = "translateY(-100%)";
-});
+function mediaq(e) {
+  if (e.matches) {
+    for (let i = 0; i < 3; i++) {
+      minicards[i].addEventListener("mouseover", () => {
+        infos[i].classList.add("info-effect");
+      });
+      minicards[i].addEventListener("mouseout", () => {
+        infos[i].classList.remove("info-effect");
+      });
+    }
+  }
+}
+desktop.addEventListener("change", mediaq);
+mediaq(desktop);
 
-minicard3.addEventListener("mouseover", () => {
-  info4.style.transform = "translateY(0%)";
-});
-minicard3.addEventListener("mouseout", () => {
-  info4.style.transform = "translateY(-100%)";
-});
+function mediaq2(e) {
+  if (e.matches) {
+    flexes[1].remove();
+    minicards[0].classList.add("main-minicard");
+  } else {
+    minicards[0].classList.remove("main-minicard");
+  }
+}
+tablet.addEventListener("change", mediaq2);
+mediaq2(tablet);
 
 // ScrollIt.js
 $(function () {
