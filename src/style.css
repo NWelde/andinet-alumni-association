@@ -84,46 +84,49 @@ canvas {
   visibility: hidden;
 }
 
-/* About Us section */
-.main-about {
-  display: flex;
-  justify-content: center;
-}
-.mini-card-title {
-  text-align: center;
-  font-size: 2em;
-  padding-top: 30px;
-  font-weight: 500;
-}
-.main-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80vw;
-  margin: 10%;
-  margin-bottom: 5%;
-  border: 1px solid rgb(232, 230, 219);
-  border-left: none;
-}
-.image1 {
-  width: 45%;
-  border-left: 1px solid rgb(232, 230, 219);
-}
-.info1 {
-  max-width: 55ch;
-  font-size: 1.5em;
-  text-align: center;
-}
+@media only screen and (min-width: 1200px) {
+  /* About us section */
+  .main-about {
+    display: flex;
+    justify-content: center;
+  }
+  .main-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: 10%;
+    margin-bottom: 5%;
+  }
+  .image1 {
+    width: 45%;
+  }
+  .info1 {
+    max-width: 50ch;
+    font-size: 1.5em;
+    text-align: center;
+    padding-left: 10px;
+  }
 
-/* Our team section */
-@media only screen and (min-width: 1101px){
+  /* Our team section */
+  .mini-card-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 30px;
+    font-weight: 500;
+  }
   .our-team {
     padding-top: 6%;
   }
   .styling {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding-top: 5%;
+  }
+  .flexy {
+    flex-basis: 100%;
+    height: 0;
   }
   .minicard {
     display: flex;
@@ -154,15 +157,49 @@ canvas {
     opacity: 1 !important;
   }
 }
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  /* About us section */
+  .main-about {
+    display: flex;
+    justify-content: center;
+  }
+  .main-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: 10%;
+    margin-bottom: 5%;
+  }
+  .image1 {
+    width: 50em;
+  }
+  .info1 {
+    max-width: 50ch;
+    font-size: 1.3em;
+    text-align: center;
+    padding-left: 10px;
+  }
 
-@media only screen and (min-width: 901px) and (max-width: 1100px) {
+  /* Our team section */
+  .mini-card-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 30px;
+    font-weight: 500;
+  }
   .our-team {
     padding-top: 6%;
   }
   .styling {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding-top: 5%;
+  }
+  .flexy {
+    flex-basis: 100%;
+    height: 0;
   }
   .minicard {
     display: flex;
@@ -181,10 +218,35 @@ canvas {
     padding: 10px;
   }
 }
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+  /* About us section */
+  .main-about {
+    display: flex;
+    justify-content: center;
+  }
+  .main-card {
+    max-width: 50vw;
+    margin: 10%;
+    border: 2.5px solid gray;
+    padding: 20px;
+  }
+  .image1 {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .info1 {
+    border-top: 2.5px solid gray;
+    font-size: 1.4em;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
 
-@media only screen and (min-width: 701px) and (max-width: 900px) {
-  .our-team {
-    padding-top: 6%;
+  /* Our team section */
+  .mini-card-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 30px;
+    font-weight: 500;
   }
   .styling {
     display: flex;
@@ -221,8 +283,36 @@ canvas {
     padding: 10px;
   }
 }
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  /* About us section */
+  .main-about {
+    display: flex;
+    justify-content: center;
+  }
+  .main-card {
+    max-width: 75vw;
+    margin: 10%;
+    border: 2.5px solid gray;
+    padding: 20px;
+  }
+  .image1 {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .info1 {
+    border-top: 2.5px solid gray;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
 
-@media only screen and (max-width: 700px) {
+  /* Our team section */
+  .mini-card-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 30px;
+    font-weight: 500;
+  }
   .our-team {
     padding-top: 6%;
   }
@@ -240,7 +330,7 @@ canvas {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 75vw;
+    width: 60vw;
     margin: 3%;
     border: 1px solid gray;
   }
@@ -249,7 +339,67 @@ canvas {
   }
   .mini-info {
     max-width: 85%;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* About us section */
+  .main-about {
+    display: flex;
+    justify-content: center;
+  }
+  .main-card {
+    max-width: 75vw;
+    margin: 10%;
+    border: 2.5px solid gray;
+    padding: 20px;
+  }
+  .image1 {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .info1 {
+    border-top: 2.5px solid gray;
+    font-size: 1em;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  /* Our team section */
+  .mini-card-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 30px;
+    font-weight: 500;
+  }
+  .our-team {
+    padding-top: 6%;
+  }
+  .styling {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 5%;
+  }
+  .flexy {
+    flex-basis: 100%;
+    height: 0;
+  }
+  .minicard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin: 3%;
+    border: 1px solid gray;
+  }
+  .mini-image {
+    width: 100%;
+  }
+  .mini-info {
+    max-width: 85%;
+    font-size: 1em;
     padding: 10px;
   }
 }

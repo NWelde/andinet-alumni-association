@@ -1,15 +1,23 @@
 let minicards = document.querySelectorAll(".minicard");
 let infos = document.querySelectorAll(".mini-info");
 
-let flexes = document.querySelectorAll(".flexy")
-const tablet = window.matchMedia(
-  "only screen and (min-width: 701px) and (max-width: 900px)"
+let flexes = document.querySelectorAll(".flexy");
+
+const desktop = window.matchMedia("only screen and (min-width: 1200px)");
+const laptop = window.matchMedia(
+  "only screen and (min-width: 1000px) and (max-width: 1200px)"
 );
-const desktop = window.matchMedia("only screen and (min-width: 1101px)");
+const tablet = window.matchMedia(
+  "only screen and (min-width: 700px) and (max-width: 1000px)"
+);
 
 function mediaq(e) {
   if (e.matches) {
-    for (let i = 0; i < 3; i++) {
+    flexes[0].remove();
+    flexes[1].remove();
+    flexes[3].remove();
+    flexes[4].remove();
+    for (let i = 0; i < 6; i++) {
       minicards[i].addEventListener("mouseover", () => {
         infos[i].classList.add("info-effect");
       });
@@ -24,12 +32,13 @@ mediaq(desktop);
 
 function mediaq2(e) {
   if (e.matches) {
-    flexes[1].remove();
-    minicards[0].classList.add("main-minicard");
-  } else {
-    minicards[0].classList.remove("main-minicard");
+    flexes[0].remove();
+    flexes[2].remove();
+    flexes[4].remove();
   }
 }
+laptop.addEventListener("change", mediaq2);
+mediaq2(laptop);
 tablet.addEventListener("change", mediaq2);
 mediaq2(tablet);
 
