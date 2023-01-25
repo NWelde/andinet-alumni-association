@@ -206,6 +206,7 @@ canvas {
 @media only screen and (min-width: 700px) and (max-width: 1000px) {
   /* About us section */
   .main-about {
+    margin-top: 15%;
     display: flex;
     justify-content: center;
   }
@@ -271,6 +272,7 @@ canvas {
 @media only screen and (min-width: 500px) and (max-width: 700px) {
   /* About us section */
   .main-about {
+    margin-top: 15%;
     display: flex;
     justify-content: center;
   }
@@ -331,6 +333,7 @@ canvas {
 @media only screen and (max-width: 500px) {
   /* About us section */
   .main-about {
+    margin-top: 15%;
     display: flex;
     justify-content: center;
   }
@@ -389,8 +392,8 @@ canvas {
   }
 }
 
-/* Carnivals Section */
-.carnivals {
+/* alumni Section */
+.alumni {
   padding-top: 6%;
   display: flex;
   justify-content: center;
@@ -438,7 +441,6 @@ canvas {
   color: #486a4a;
 }
 
-/* Alumni Section */
-.alumni {
-  padding-top: 10%;
+.events {
+  margin: 5%;
 }
