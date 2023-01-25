@@ -17,21 +17,6 @@ body {
   color: white;
 }
 
-/* Scrollbar */
-body::-webkit-scrollbar {
-  width: 20px;
-}
-body::-webkit-scrollbar-track {
-  background: rgb(43, 63, 45);
-  width: 10px;
-}
-body::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-  background-color: white;
-}
-
 /* Particles.js */
 canvas {
   display: block;
