@@ -4,8 +4,8 @@
   margin: 0;
   font-family: "Darker Grotesque", sans-serif;
   box-sizing: content-box;
-  --swiper-pagination-color: #486a4a;
 }
+
 html,
 body {
   width: 100%;
@@ -21,10 +21,12 @@ body {
 canvas {
   display: block;
 }
+
 .pjs-container {
   position: relative;
   color: white;
 }
+
 #particles-js {
   position: absolute;
   width: 100vw;
@@ -36,22 +38,76 @@ canvas {
   background-position: 50% 50%;
 }
 
-/* Navbar */
-.navbar {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
+@media only screen and (min-width: 700px) {
+
+  /* Navbar */
+  .navbar {
+    position: relative;
+    display: flex;
+  }
+
+  #navlinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .navitem {
+    display: inline;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin: 20px 0 0 0;
+    transition: color 0.5s ease;
+  }
+
+  .navitem:hover {
+    cursor: pointer;
+    color: rgb(218, 207, 148);
+  }
+
+  button.icon {
+    display: none;
+  }
 }
-.navitem {
-  display: inline;
-  font-weight: 500;
-  font-size: 1.3em;
-  padding: 20px 0 0 0;
-  transition: color 0.5s ease;
-}
-.navitem:hover {
-  cursor: pointer;
-  color: rgb(218, 207, 148);
+
+@media only screen and (max-width: 700px) {
+
+  /* Navbar */
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+  }
+
+  #navlinks {
+    display: none;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid white;
+  }
+
+  .navitem {
+    display: inline;
+    font-weight: 500;
+    font-size: 1.3em;
+    padding: 5px;
+    transition: color 0.5s ease;
+    border-right: 1px solid white;
+  }
+
+  .navitem:nth-of-type(4) {
+    border-right: none;
+  }
+
+  .navitem:hover {
+    cursor: pointer;
+    color: rgb(218, 207, 148);
+  }
+
+  button.icon {
+    padding: 15px;
+  }
 }
 
 /* Title text */
@@ -62,6 +118,7 @@ canvas {
   text-align: center;
   margin: 20% 0 0 0;
 }
+
 /* Not an elegant solution but empty div that takes up space */
 .empty {
   width: 50vw;
@@ -70,11 +127,13 @@ canvas {
 }
 
 @media only screen and (min-width: 1200px) {
+
   /* About us section */
   .main-about {
     display: flex;
     justify-content: center;
   }
+
   .main-card {
     display: flex;
     justify-content: space-between;
@@ -83,9 +142,11 @@ canvas {
     margin: 10%;
     margin-bottom: 5%;
   }
+
   .image1 {
     width: 45%;
   }
+
   .info1 {
     max-width: 50ch;
     font-size: 1.5em;
@@ -100,19 +161,23 @@ canvas {
     padding-top: 30px;
     font-weight: 500;
   }
+
   .our-team {
     padding-top: 6%;
   }
+
   .styling {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding-top: 5%;
   }
+
   .flexy {
     flex-basis: 100%;
     height: 0;
   }
+
   .minicard {
     display: flex;
     justify-content: center;
@@ -121,13 +186,16 @@ canvas {
     margin: 3%;
     transition: all 0.5s ease;
   }
+
   .minicard:hover {
     width: 25vw;
   }
+
   .mini-image {
     flex-basis: 100%;
     z-index: 1;
   }
+
   .mini-info {
     max-width: 300px;
     font-size: 1.2em;
@@ -137,17 +205,21 @@ canvas {
     transition: all 1s;
     padding: 10px;
   }
+
   .info-effect {
     transform: translateY(0%) !important;
     opacity: 1 !important;
   }
 }
+
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
   /* About us section */
   .main-about {
     display: flex;
     justify-content: center;
   }
+
   .main-card {
     display: flex;
     justify-content: space-between;
@@ -156,9 +228,11 @@ canvas {
     margin: 10%;
     margin-bottom: 5%;
   }
+
   .image1 {
     width: 50em;
   }
+
   .info1 {
     max-width: 50ch;
     font-size: 1.3em;
@@ -173,19 +247,23 @@ canvas {
     padding-top: 30px;
     font-weight: 500;
   }
+
   .our-team {
     padding-top: 6%;
   }
+
   .styling {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding-top: 5%;
   }
+
   .flexy {
     flex-basis: 100%;
     height: 0;
   }
+
   .minicard {
     display: flex;
     justify-content: center;
@@ -194,32 +272,39 @@ canvas {
     margin: 3%;
     border: 1px solid gray;
   }
+
   .mini-image {
     width: 100%;
   }
+
   .mini-info {
     max-width: 85%;
     font-size: 1.2em;
     padding: 10px;
   }
 }
+
 @media only screen and (min-width: 700px) and (max-width: 1000px) {
+
   /* About us section */
   .main-about {
     margin-top: 15%;
     display: flex;
     justify-content: center;
   }
+
   .main-card {
     max-width: 50vw;
     margin: 10%;
     border: 2.5px solid gray;
     padding: 20px;
   }
+
   .image1 {
     width: 100%;
     border-radius: 50%;
   }
+
   .info1 {
     border-top: 2.5px solid gray;
     font-size: 1.4em;
@@ -234,12 +319,14 @@ canvas {
     padding-top: 30px;
     font-weight: 500;
   }
+
   .styling {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 5%;
   }
+
   .main-minicard {
     display: flex;
     justify-content: center;
@@ -248,10 +335,12 @@ canvas {
     margin: 3%;
     border: 1px solid gray;
   }
+
   .flexy {
     flex-basis: 100%;
     height: 0;
   }
+
   .minicard {
     display: flex;
     justify-content: center;
@@ -260,32 +349,39 @@ canvas {
     margin: 3%;
     border: 1px solid gray;
   }
+
   .mini-image {
     width: 100%;
   }
+
   .mini-info {
     max-width: 85%;
     font-size: 1.2em;
     padding: 10px;
   }
 }
+
 @media only screen and (min-width: 500px) and (max-width: 700px) {
+
   /* About us section */
   .main-about {
     margin-top: 15%;
     display: flex;
     justify-content: center;
   }
+
   .main-card {
     max-width: 75vw;
     margin: 10%;
     border: 2.5px solid gray;
     padding: 20px;
   }
+
   .image1 {
     width: 100%;
     border-radius: 50%;
   }
+
   .info1 {
     border-top: 2.5px solid gray;
     font-size: 1.2em;
@@ -300,19 +396,23 @@ canvas {
     padding-top: 30px;
     font-weight: 500;
   }
+
   .our-team {
     padding-top: 6%;
   }
+
   .styling {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 5%;
   }
+
   .flexy {
     flex-basis: 100%;
     height: 0;
   }
+
   .minicard {
     display: flex;
     justify-content: center;
@@ -321,32 +421,39 @@ canvas {
     margin: 3%;
     border: 1px solid gray;
   }
+
   .mini-image {
     width: 100%;
   }
+
   .mini-info {
     max-width: 85%;
     font-size: 1.1em;
     padding: 10px;
   }
 }
+
 @media only screen and (max-width: 500px) {
+
   /* About us section */
   .main-about {
     margin-top: 15%;
     display: flex;
     justify-content: center;
   }
+
   .main-card {
     max-width: 75vw;
     margin: 10%;
     border: 2.5px solid gray;
     padding: 20px;
   }
+
   .image1 {
     width: 100%;
     border-radius: 50%;
   }
+
   .info1 {
     border-top: 2.5px solid gray;
     font-size: 1em;
@@ -361,19 +468,23 @@ canvas {
     padding-top: 30px;
     font-weight: 500;
   }
+
   .our-team {
     padding-top: 6%;
   }
+
   .styling {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 5%;
   }
+
   .flexy {
     flex-basis: 100%;
     height: 0;
   }
+
   .minicard {
     display: flex;
     justify-content: center;
@@ -382,65 +493,14 @@ canvas {
     margin: 3%;
     border: 1px solid gray;
   }
+
   .mini-image {
     width: 100%;
   }
+
   .mini-info {
     max-width: 85%;
     font-size: 1em;
     padding: 10px;
   }
-}
-
-/* alumni Section */
-.alumni {
-  padding-top: 6%;
-  display: flex;
-  justify-content: center;
-}
-/* Swiper.js */
-.swipercont {
-  position: relative;
-  height: 80vh;
-  width: 80vw;
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-.swiper {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: url("data:image/png;base64,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");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  color: #486a4a;
-}
-.swiper-pagination-bullet-active {
-  color: #486a4a;
-}
-
-.events {
-  margin: 5%;
 }

@@ -10,8 +10,7 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -21,11 +20,17 @@
     <!-- Particles.js container -->
     <div id="particles-js"></div>
     <!-- Navbar -->
+
     <div class="navbar">
-      <a data-scroll-nav="0" class="navitem">About Us</a>
-      <a data-scroll-nav="1" class="navitem">Our Team</a>
-      <a data-scroll-nav="2" class="navitem">Alumni</a>
-      <a data-scroll-nav="3" class="navitem">Events and Opportunities</a>
+      <div id="navlinks">
+        <a data-scroll-nav="0" class="navitem">About Us</a>
+        <a data-scroll-nav="1" class="navitem">Our Team</a>
+        <a data-scroll-nav="2" class="navitem">Alumni</a>
+        <a data-scroll-nav="3" class="navitem">Events and Opportunities</a>
+      </div>
+      <button class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </button>
     </div>
     <h1 class="main">Andinet Alumni Association</h1>
   </div>
@@ -144,57 +149,12 @@
     </div>
   </section>
 
-  <section class="alumni" data-scroll-index="2">
-    <!-- Swiper Container -->
-    <div class="swipercont">
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" id="sliderimg1"></div>
-          <div class="swiper-slide" id="sliderimg2"></div>
-          <div class="swiper-slide" id="sliderimg3"></div>
-          <div class="swiper-slide" id="sliderimg4"></div>
-          <div class="swiper-slide" id="sliderimg5"></div>
-          <div class="swiper-slide" id="sliderimg6"></div>
-          <div class="swiper-slide" id="sliderimg7"></div>
-          <div class="swiper-slide" id="sliderimg8"></div>
-          <div class="swiper-slide" id="sliderimg9"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="events" data-scroll-index="3">
-
-  </section>
-
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <!-- Scrollit.js -->
   <script src="../AdditionalScripts/scrollIt.min.js" type="text/javascript"></script>
-
-  <!-- Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
 
   <!-- particle.js -->
   <script src="../AdditionalScripts/particles.min.js" type="text/javascript"></script>
